@@ -1,67 +1,74 @@
 package com.mycompany.caixerautomatic;
 
-import javafx.application.Application;
-import javafx.scene.control.*;
-import javafx.scene.text.Font;
+import java.io.IOException;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class Login extends Application {
+public class Login {
 
-    private static final String USERNAME = "user";
-    private static final String PASSWORD = "password";
-    private static final int MAX_ATTEMPTS = 3;
-    private int attempts = 0;
-    private boolean locked = false;
+    @FXML
+    Label mensaje;
+    @FXML
+    Button login;
+    @FXML
+    TextField usuario;
+    @FXML
+    PasswordField contraseña;
+    
+    int intentos = 0;
 
-    @Override
-    public void start(Stage primaryStage) {
 
-        // Create UI controls
-        Label titleLabel = new Label("Bank ATM");
-        titleLabel.setFont(new Font("Arial", 24));
-
-        Label usernameLabel = new Label("Username:");
-        TextField usernameField = new TextField();
-
-        Label passwordLabel = new Label("Password:");
-        PasswordField passwordField = new PasswordField();
-
-        Button loginButton = new Button("Login");
-
-        // Set button action
-        loginButton.setOnAction(event -> {
-            String username = usernameField.getText();
-            String password = passwordField.getText();
-
-            if (locked) {
-                Alert alert = new Alert(Alert.AlertType.ERROR, "Account is locked!");
-                alert.showAndWait();
-                return;
-            }
-
-            if (username.equals(USERNAME) && password.equals(PASSWORD)) {
-
-                attempts = 0;
-
-            } else {
-                attempts++;
-                if (attempts == MAX_ATTEMPTS) {
-                    // Lock the account after too many failed attempts
-                    locked = true;
-                    Alert alert = new Alert(Alert.AlertType.ERROR, "Too many failed attempts! Account is now locked.");
-                    alert.showAndWait();
-                } else {
-                    Alert alert = new Alert(Alert.AlertType.ERROR, "Invalid username or password");
-                    alert.showAndWait();
+    public void initialize(){
+    }
+    
+    public void login() throws IOException {
+    String[] usuarios = {"asier","carlos", "jon", "ismael"};
+    String[] passwords = {"asier", "carlos", "jon", "ismael"};
+    String user = usuario.getText();
+    String password = contraseña.getText();
+    App.nom = user;
+    
+    
+    //VALIDACION DE LECTURA DE USUARIOS Y CONTRASEÑAS
+            for (int i = 0; i < usuarios.length; i++) {
+                if (usuarios[i].equals(user) && passwords[i].equals(password)) {
+                    App.setRoot("secondary");                
                 }
             }
-        });
-
-        
-    }
-
-    public static void main(String[] args) {
-        launch(args);
+            
+    //ERROR INICIO DE SESIÓN
+            for (int i = 0; i< usuarios.length; i++){
+                
+                //algun campo vacio
+                if (user.equals("") || password.equals("")) {
+                mensaje.setText("Rellena todos los campos");
+                
+                //todos los campos rellenos pero con algun error
+                }else if (!usuarios[i].equals(user) && !passwords[i].equals(password) || 
+                          usuarios[i].equals(user) && !passwords[i].equals(password) || 
+                          !usuarios[i].equals(user) && passwords[i].equals(password)) {
+                    intentos++;
+                    mensaje.setText("Error, has introducido los valores \nincorrectamente "+intentos+" vez/ces");
+                    
+                    //acumulador de errores
+                    if (intentos == 3) {
+                        usuario.setEditable(false);
+                        contraseña.setEditable(false);
+                        mensaje.setText("Error, has introducido los valores \nincorrectamente demasiadas veces");
+                    }
+                }
+                break;
+            
+            }
     }
 }
 
