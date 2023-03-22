@@ -59,16 +59,16 @@ public class Login {
     
             for (int i = 0; i< usuaris.length; i++){
                 
+                //Primer comprova que no hi ha cap camp omplert i envia un missatge advertint a l'usuari. Té que ser la primera comprovació perquè és la més restrictiva
+
+                    if (user.equals("") || contrasenya.equals("")) {
+                     missatge.setText("Rellena todos los campos");
+                
                 //Aquí comprova si: 1.El usuari i contrasenya no coincideixen. 2.La contrasenya no coincideix amb l'usuari. 3.L'Usuari no coincideix amb la contrasenya
                 
-                     if (!usuaris[i].equals(user) && !contrasenyes[i].equals(contrasenya) || 
-                     usuaris[i].equals(user) && !contrasenyes[i].equals(contrasenya) || 
-                     !usuaris[i].equals(user) && contrasenyes[i].equals(contrasenya)) {
-                
-                //Aquí comprova que no hi ha cap camp omplert i envia un missatge advertint a l'usuari
-                
-                     }else if (user.equals("") || contrasenya.equals("")) {
-                     missatge.setText("Rellena todos los campos");
+                    }else if (!usuaris[i].equals(user) && !contrasenyes[i].equals(contrasenya) || 
+                    usuaris[i].equals(user) && !contrasenyes[i].equals(contrasenya) || 
+                    !usuaris[i].equals(user) && contrasenyes[i].equals(contrasenya)) {
                   
                 //Per cada vegada que l'usuari s'equivoqui és sumarà un 1 al int dels intents:
                 
