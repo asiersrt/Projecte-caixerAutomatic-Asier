@@ -26,19 +26,19 @@
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <TextField fx:id="usuario" layoutX="266.0" layoutY="96.0" prefHeight="36.0" prefWidth="190.0">
+            <TextField fx:id="usuari" layoutX="266.0" layoutY="96.0" prefHeight="36.0" prefWidth="190.0">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="contraseña" layoutX="266.0" layoutY="217.0" prefHeight="36.0" prefWidth="190.0" />
-            <Label layoutX="280.0" layoutY="181.0" text="Password">
+            <PasswordField fx:id="contrasenya" layoutX="266.0" layoutY="217.0" prefHeight="36.0" prefWidth="190.0" />
+            <Label layoutX="254.0" layoutY="181.0" text="Contrasenya">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <Label fx:id="mensaje" layoutX="14.0" layoutY="365.0" text="Mensaje:" />
-            <Button fx:id="login" layoutX="334.0" layoutY="288.0" mnemonicParsing="false" text="Login" />
+            <Label fx:id="missatge" layoutX="14.0" layoutY="365.0" text="Missatge:" />
+            <Button fx:id="login" layoutX="334.0" layoutY="288.0" mnemonicParsing="false" onAction="#login" text="Login" />
          </children>
       </Pane>
    </children>
