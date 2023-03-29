@@ -15,7 +15,7 @@
    <children>
       <ImageView fx:id="imatgeBanc" fitHeight="200.0" fitWidth="834.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../BANCO(3).png" />
+            <Image url="@BANCO(3).png" />
          </image>
       </ImageView>
       <Separator prefWidth="200.0" />
@@ -38,7 +38,7 @@
                </font>
             </Label>
             <Label fx:id="missatge" layoutX="14.0" layoutY="350.0" text="Missatge:" />
-            <Button fx:id="login" layoutX="334.0" layoutY="288.0" mnemonicParsing="false" onAction="#login" text="Login" />
+            <Button fx:id="login" layoutX="322.0" layoutY="289.0" mnemonicParsing="false" onAction="#login" stylesheets="@estils.css" text="Login" />
          </children>
       </Pane>
    </children>

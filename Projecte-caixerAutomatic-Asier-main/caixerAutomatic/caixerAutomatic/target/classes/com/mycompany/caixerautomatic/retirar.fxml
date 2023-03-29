@@ -18,7 +18,7 @@
                      <children>
                         <ImageView fitHeight="137.0" fitWidth="259.0" layoutX="157.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../BANCO_7_-removebg-preview.png" />
+                              <Image url="@BANCO_7_-removebg-preview.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -27,7 +27,7 @@
             </Pane>
             <ImageView fitHeight="88.0" fitWidth="79.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../DALL_E_2023-03-15_09.41.39_-_logo-removebg-preview.png" />
+                  <Image url="@DALL_E_2023-03-15_09.41.39_-_logo-removebg-preview.png" />
                </image>
             </ImageView>
             <Button layoutX="479.0" layoutY="42.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="171.0" text="TANCAR COMPTE" />
