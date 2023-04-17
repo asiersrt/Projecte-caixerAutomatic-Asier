@@ -4,18 +4,12 @@
  */
 package com.mycompany.caixerautomatic;
 
-import java.io.IOException;
-import javafx.fxml.FXML;
-
 /**
  *
  * @author alumne
  */
-public class SecondaryController {
-
-    @FXML
-    private void switchToSecondary() throws IOException {
-        App.setRoot("third");
-    }
+public class CompteActual {
+    
+    
+    
 }
-

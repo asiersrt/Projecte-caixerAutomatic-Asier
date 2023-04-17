@@ -15,6 +15,7 @@ public class App extends Application {
 
     private static Scene scene;
     static String nom;
+    static boolean comptes;
 
     @Override
     public void start(Stage stage) throws IOException {

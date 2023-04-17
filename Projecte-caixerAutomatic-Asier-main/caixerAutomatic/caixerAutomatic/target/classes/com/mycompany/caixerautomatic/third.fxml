@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1">
-    
-</AnchorPane>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.caixerautomatic.Comptes">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: white;">
+         <children>
+            <Pane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: lightgrey;" />
+            <Pane layoutX="50.0" layoutY="100.0" prefHeight="449.0" prefWidth="600.0" style="-fx-background-color: darkgrey;">
+               <children>
+                  <Pane layoutX="100.0" layoutY="50.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: black;">
+                     <children>
+                        <Button fx:id="compteestalvis" layoutX="224.0" layoutY="20.0" mnemonicParsing="false" onAction="#comptes" prefHeight="56.0" prefWidth="152.0" text="COMPTE D'ESTALVIS" />
+                        <Button fx:id="comptecorrent" layoutX="27.0" layoutY="20.0" mnemonicParsing="false" onAction="#comptes" prefHeight="56.0" prefWidth="152.0" text="COMPTE CORRENT" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="14.0" layoutY="379.0" prefHeight="56.0" prefWidth="572.0" style="-fx-background-color: grey;" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="88.0" fitWidth="79.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@DALL_E_2023-03-15_09.41.39_-_logo-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</VBox>
