@@ -6,11 +6,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.caixerautomatic.SecondaryController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.caixerautomatic.ThirdController">
    <children>
       <Pane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: white;">
          <children>
-            <Pane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: lightgrey;" />
+            <Pane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: lightgrey;">
+               <children>
+                  <Button fx:id="enrere" layoutX="128.0" layoutY="45.0" mnemonicParsing="false" onAction="#switchToThird" prefHeight="29.0" prefWidth="35.0" text="↩" />
+               </children></Pane>
             <Pane layoutX="50.0" layoutY="100.0" prefHeight="449.0" prefWidth="600.0" style="-fx-background-color: darkgrey;">
                <children>
                   <Pane layoutX="100.0" layoutY="50.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: black;" />
@@ -30,8 +33,8 @@
                   <Image url="@DALL_E_2023-03-15_09.41.39_-_logo-removebg-preview.png" />
                </image>
             </ImageView>
-            <Button layoutX="479.0" layoutY="42.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="171.0" text="TANCAR COMPTE" />
-            <Button layoutX="179.0" layoutY="42.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="273.0" text="CANVIAR CLAU D'ACCES" />
+            <Button layoutX="479.0" layoutY="42.0" mnemonicParsing="false" onAction="#menuIniciSessio" prefHeight="35.0" prefWidth="171.0" text="TANCAR COMPTE" />
+            <Button layoutX="179.0" layoutY="42.0" mnemonicParsing="false" onAction="#menuClauAcces" prefHeight="35.0" prefWidth="273.0" text="CANVIAR CLAU D'ACCES" />
          </children>
       </Pane>
    </children>

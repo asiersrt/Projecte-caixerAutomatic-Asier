@@ -7,8 +7,9 @@ import javafx.fxml.FXML;
 public class PrimaryController {
 
     @FXML
-    private void switchToPrimary() throws IOException {
+    private void comptesUsuari() throws IOException {
         App.setRoot("secondary");
-    }
+    }   
+        
 }
 
