@@ -8,6 +8,6 @@ package com.mycompany.caixerautomatic;
  *
  * @author alumne
  */
-public class Transferencia {
+public class Saldo {
     
 }
