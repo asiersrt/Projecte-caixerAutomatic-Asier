@@ -1,30 +1,92 @@
+/**
+* La classe SecondaryController és responsable de gestionar les interaccions de l'usuari amb la vista secundària
+* de l'aplicació CaixerAutomàtic. Defineix mètodes per canviar entre diferents vistes i tancar l'aplicació.
+@author Asier Rodriguez
+@version 1.0
+*/
 package com.mycompany.caixerautomatic;
 
-//MENU LOGIN
-import java.io.IOException;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.stage.Stage;
 
-    public class SecondaryController {
+import java.io.IOException;
 
-    @FXML
-    private void switchToSecondary() throws IOException {
-        App.setRoot("third");
-    } 
+public class SecondaryController {
     
     @FXML
-    private void menuOpcions() throws IOException {
-        App.setRoot("third");
+    void tornarEnrere() throws IOException {
+        App.setRoot("secondary");
     }
     
     @FXML
-    private void menuClauAcces() throws IOException {
+    void tarjeta() throws IOException {
+        App.setRoot("tarjeta");
+    }
+    
+    @FXML
+    void informacio() throws IOException {
+        App.setRoot("informacio");
+    }
+    
+    @FXML
+    void ingressar() throws IOException {
+        App.setRoot("ingressar");
+    }
+    
+    @FXML
+    void deposit() throws IOException {
+        App.setRoot("deposit");
+    }
+    
+    @FXML
+    void retirar() throws IOException {
+        App.setRoot("retirar");
+    }
+    
+    @FXML
+    void transferencia() throws IOException {
+        App.setRoot("transferencia");
+    }
+    
+    @FXML
+    void prestamo() throws IOException {
+        App.setRoot("prestamo");
+    }
+    
+    @FXML
+    void moviment() throws IOException {
+        App.setRoot("moviment");
+    }
+    
+    @FXML
+    void saldo() throws IOException {
+        App.setRoot("saldo");
+    }
+    
+    @FXML
+    void bitlletsCaixer() throws IOException {
+        App.setRoot("bitllets");
+    }
+    
+    @FXML
+    void canviClauAcces() throws IOException {
         App.setRoot("clau");
     }
     
     @FXML
-    private void menuIniciSessio() throws IOException {
+    void canviCompte() throws IOException {
         App.setRoot("primary");
     }
 
+    @FXML
+    public void sortir(ActionEvent event) {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.close();
+    }
 }
+
+    
+
 
