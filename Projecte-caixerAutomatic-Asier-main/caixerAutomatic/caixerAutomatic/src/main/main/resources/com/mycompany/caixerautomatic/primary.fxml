@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.caixerautomatic.Login">
+   <children>
+      <ImageView fx:id="imatgeBanc" fitHeight="200.0" fitWidth="834.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@BANCO(3).png" />
+         </image>
+      </ImageView>
+      <Separator prefWidth="200.0" />
+      <Pane prefHeight="397.0" prefWidth="700.0">
+         <children>
+            <Label layoutX="307.0" layoutY="53.0" text="Usuari">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usuari" layoutX="266.0" layoutY="96.0" prefHeight="36.0" prefWidth="190.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="contrasenya" layoutX="266.0" layoutY="217.0" prefHeight="36.0" prefWidth="190.0">
+               <font>
+                  <Font name="Lato Regular" size="12.0" />
+               </font></PasswordField>
+            <Label layoutX="258.0" layoutY="171.0" text="Contrasenya">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="missatge" layoutX="14.0" layoutY="366.0" text="Missatge:" />
+            <Button fx:id="login" layoutX="323.0" layoutY="287.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: grey;" stylesheets="@estils.css" text="Login" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

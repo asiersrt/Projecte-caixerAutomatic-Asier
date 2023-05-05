@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.caixerautomatic.DepositController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: white;">
+         <children>
+            <Pane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: lightgrey;">
+               <children>
+                  <Button layoutX="145.0" layoutY="45.0" mnemonicParsing="false" onAction="#tornarEnrere" prefHeight="29.0" prefWidth="35.0" text="↩" />
+                  <Button layoutX="265.0" layoutY="42.0" mnemonicParsing="false" onAction="#sortir" prefHeight="35.0" prefWidth="171.0" text="TANCAR COMPTE" />
+               </children>
+            </Pane>
+            <Pane layoutX="50.0" layoutY="100.0" prefHeight="449.0" prefWidth="600.0" style="-fx-background-color: darkgrey;">
+               <children>
+                  <Pane layoutX="100.0" layoutY="50.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: black;">
+                     <children>
+                        <TextField fx:id="depositField" layoutX="114.0" layoutY="79.0" />
+                        <Text fx:id="resultText" fill="WHITE" layoutX="14.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Missatge:" />
+                        <Button layoutX="158.0" layoutY="126.0" mnemonicParsing="false" onAction="#depositMoney" text="Depositar" />
+                        <Label layoutX="128.0" layoutY="55.0" text="Quantitat a depositar:" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="14.0" layoutY="379.0" prefHeight="56.0" prefWidth="572.0" style="-fx-background-color: grey;">
+                     <children>
+                        <ImageView fitHeight="79.0" fitWidth="249.0" layoutX="162.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@DEPOSIT-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <ImageView fitHeight="88.0" fitWidth="79.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@DALL_E_2023-03-15_09.41.39_-_logo-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</VBox>
