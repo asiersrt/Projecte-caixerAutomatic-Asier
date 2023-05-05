@@ -1,41 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.caixerautomatic.SaldoController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.caixerautomatic.MovimentsController">
    <children>
       <Pane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: white;">
          <children>
             <Pane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: lightgrey;">
                <children>
-                  <Button layoutX="128.0" layoutY="45.0" mnemonicParsing="false" onAction="#tornarEnrere" prefHeight="29.0" prefWidth="35.0" text="↩" />
-                  <Button layoutX="265.0" layoutY="42.0" mnemonicParsing="false" onAction="#sortir" prefHeight="35.0" prefWidth="171.0" text="TANCAR COMPTE" />
+                  <Button layoutX="154.0" layoutY="45.0" mnemonicParsing="false" onAction="#tornarEnrere" prefHeight="29.0" prefWidth="35.0" text="↩" />
+                  <Button fx:id="sortir" layoutX="265.0" layoutY="42.0" mnemonicParsing="false" onAction="#sortir" prefHeight="35.0" prefWidth="171.0" text="TANCAR COMPTE" />
                </children></Pane>
             <Pane layoutX="50.0" layoutY="100.0" prefHeight="449.0" prefWidth="600.0" style="-fx-background-color: darkgrey;">
                <children>
                   <Pane layoutX="100.0" layoutY="50.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: black;">
-    <children>
-        <Label fx:id="labelSaldo" layoutX="14.0" layoutY="88.0" text="Saldo" textFill="WHITE" />
-        <Label fx:id="labelSaldoTotal" layoutX="14.0" layoutY="112.0" text="Saldo total" textFill="WHITE" />
-                        <ComboBox fx:id="comboBoxComptes" layoutX="14.0" layoutY="26.0" prefWidth="150.0" />
-                        <Label layoutX="14.0" layoutY="65.0" text="Saldo del compte actual:" textFill="WHITE" />
-    </children>
-</Pane>
+                     <children>
+                        <ListView fx:id="movimientosListView" layoutX="20.0" layoutY="50.0" prefHeight="200.0" prefWidth="360.0" />
+                        <Label layoutX="130.0" layoutY="25.0" text="Moviments efectuats:" textFill="WHITE" />
+                     </children></Pane>
                   <Pane layoutX="14.0" layoutY="379.0" prefHeight="56.0" prefWidth="572.0" style="-fx-background-color: grey;">
                      <children>
-                        <ImageView fitHeight="137.0" fitWidth="259.0" layoutX="157.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="72.0" fitWidth="242.0" layoutX="165.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@BANCO_3_-removebg-preview(1).png" />
+                              <Image url="@BANCO__1_-removebg-preview.png" />
                            </image>
                         </ImageView>
-                     </children>
-                  </Pane>
+                     </children></Pane>
                </children>
             </Pane>
             <ImageView fitHeight="88.0" fitWidth="79.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">

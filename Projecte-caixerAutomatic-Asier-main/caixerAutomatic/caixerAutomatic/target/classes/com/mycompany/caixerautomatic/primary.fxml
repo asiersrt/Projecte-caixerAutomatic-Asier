@@ -21,7 +21,7 @@
       <Separator prefWidth="200.0" />
       <Pane prefHeight="397.0" prefWidth="700.0">
          <children>
-            <Label layoutX="307.0" layoutY="60.0" text="Usuari">
+            <Label layoutX="307.0" layoutY="53.0" text="Usuari">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
@@ -31,14 +31,17 @@
                   <Font size="14.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="contrasenya" layoutX="266.0" layoutY="217.0" prefHeight="36.0" prefWidth="190.0" />
-            <Label layoutX="254.0" layoutY="181.0" text="Contrasenya">
+            <PasswordField fx:id="contrasenya" layoutX="266.0" layoutY="217.0" prefHeight="36.0" prefWidth="190.0">
+               <font>
+                  <Font name="Lato Regular" size="12.0" />
+               </font></PasswordField>
+            <Label layoutX="258.0" layoutY="171.0" text="Contrasenya">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <Label fx:id="missatge" layoutX="14.0" layoutY="350.0" text="Missatge:" />
-            <Button fx:id="login" layoutX="322.0" layoutY="289.0" mnemonicParsing="false" onAction="#login" stylesheets="@estils.css" text="Login" />
+            <Label fx:id="missatge" layoutX="14.0" layoutY="366.0" text="Missatge:" />
+            <Button fx:id="login" layoutX="323.0" layoutY="287.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: grey;" stylesheets="@estils.css" text="Login" />
          </children>
       </Pane>
    </children>

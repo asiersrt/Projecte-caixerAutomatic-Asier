@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.caixerautomatic.TransferenciaController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.caixerautomatic.PrestamoController">
    <children>
       <Pane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: white;">
          <children>
@@ -16,29 +16,28 @@
                <children>
                   <Button layoutX="145.0" layoutY="45.0" mnemonicParsing="false" onAction="#tornarEnrere" prefHeight="29.0" prefWidth="35.0" text="↩" />
                   <Button layoutX="265.0" layoutY="42.0" mnemonicParsing="false" onAction="#sortir" prefHeight="35.0" prefWidth="171.0" text="TANCAR COMPTE" />
-               </children></Pane>
+               </children>
+            </Pane>
             <Pane layoutX="50.0" layoutY="100.0" prefHeight="449.0" prefWidth="600.0" style="-fx-background-color: darkgrey;">
                <children>
                   <Pane layoutX="100.0" layoutY="50.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: black;">
                      <children>
-                        <ComboBox fx:id="comboBoxCuentaDestino" layoutX="236.0" layoutY="66.0" prefWidth="150.0" />
-                        <ComboBox fx:id="comboBoxCuentaOrigen" layoutX="18.0" layoutY="66.0" prefWidth="150.0" />
-                        <ComboBox fx:id="comboBoxMonto" layoutX="125.0" layoutY="138.0" prefWidth="150.0" />
-                        <Button layoutX="159.0" layoutY="216.0" mnemonicParsing="false" onAction="#realizarTransferencia" text="Confirmar" />
-                        <Label layoutX="51.0" layoutY="38.0" text="Compte donant" textFill="WHITE" />
-                        <Label layoutX="275.0" layoutY="38.0" text="Compte revent" textFill="WHITE" />
-                        <Label layoutX="175.0" layoutY="114.0" text="Quantitat" textFill="WHITE" />
-                        <ImageView fitHeight="29.0" fitWidth="100.0" layoutX="186.0" layoutY="64.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@fletxa-removebg-preview.png" />
-                           </image>
-                        </ImageView>
-                     </children></Pane>
+                        <Button layoutX="269.0" layoutY="100.0" mnemonicParsing="false" onAction="#calcularPrestamo" text="Confirmar" />
+                        <Label fx:id="lblMontoPrestamo" layoutX="131.0" layoutY="225.0" text="Quantitat del préstec" textFill="WHITE" />
+                        <Label fx:id="lblPagoMensual" layoutX="154.0" layoutY="252.0" text="Pago mensual" textFill="WHITE" />
+                        <TextField fx:id="txtTasaInteres" layoutX="30.0" layoutY="163.0" />
+                        <TextField fx:id="txtMonto" layoutX="30.0" layoutY="37.0" />
+                        <TextField fx:id="txtPlazoAmortizacion" layoutX="30.0" layoutY="100.0" />
+                        <Label layoutX="30.0" layoutY="14.0" text="Quantitat demanada:" textFill="WHITE" />
+                        <Label layoutX="30.0" layoutY="76.0" text="Termini d'amortització:" textFill="WHITE" />
+                        <Label layoutX="30.0" layoutY="142.0" text="Tasa d'interès:" textFill="WHITE" />
+                     </children>
+                  </Pane>
                   <Pane layoutX="14.0" layoutY="379.0" prefHeight="56.0" prefWidth="572.0" style="-fx-background-color: grey;">
                      <children>
-                        <ImageView fitHeight="137.0" fitWidth="259.0" layoutX="157.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="87.0" fitWidth="242.0" layoutX="165.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@BANCO_4_-removebg-preview.png" />
+                              <Image url="@BANCO__2_-removebg-preview.png" />
                            </image>
                         </ImageView>
                      </children>

@@ -10,15 +10,25 @@
    <children>
       <Pane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: white;">
          <children>
-            <Pane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: lightgrey;" />
+            <Pane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: lightgrey;">
+               <children>
+                  <Button layoutX="262.0" layoutY="43.0" mnemonicParsing="false" onAction="#canviClauAcces" prefHeight="35.0" prefWidth="208.0" text="CANVIAR CLAU D'ACCÉS" />
+                  <Button layoutX="479.0" layoutY="43.0" mnemonicParsing="false" onAction="#sortir" prefHeight="35.0" prefWidth="171.0" text="TANCAR COMPTE" />
+               </children></Pane>
             <Pane layoutX="50.0" layoutY="100.0" prefHeight="449.0" prefWidth="600.0" style="-fx-background-color: darkgrey;">
                <children>
                   <Pane layoutX="100.0" layoutY="50.0" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: black;">
                      <children>
-                        <Button layoutX="230.0" layoutY="20.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="133.0" text="TRANSFERENCIA" />
-                        <Button layoutX="40.0" layoutY="20.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="133.0" text="SALDO" />
-                        <Button layoutX="40.0" layoutY="122.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="133.0" text="INGRESSAR" />
-                        <Button layoutX="230.0" layoutY="122.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="133.0" text="RETIRAR" />
+                        <Button layoutX="230.0" layoutY="20.0" mnemonicParsing="false" onAction="#transferencia" prefHeight="35.0" prefWidth="133.0" text="TRANSFERENCIA" />
+                        <Button layoutX="40.0" layoutY="20.0" mnemonicParsing="false" onAction="#saldo" prefHeight="35.0" prefWidth="133.0" text="SALDO" />
+                        <Button layoutX="40.0" layoutY="74.0" mnemonicParsing="false" onAction="#ingressar" prefHeight="35.0" prefWidth="133.0" text="INGRESSAR" />
+                        <Button layoutX="230.0" layoutY="74.0" mnemonicParsing="false" onAction="#retirar" prefHeight="35.0" prefWidth="133.0" text="RETIRAR" />
+                        <Button layoutX="230.0" layoutY="133.0" mnemonicParsing="false" onAction="#moviment" prefHeight="35.0" prefWidth="133.0" text="MOVIMENTS" />
+                        <Button layoutX="40.0" layoutY="133.0" mnemonicParsing="false" onAction="#deposit" prefHeight="35.0" prefWidth="133.0" text="DEPOSIT" />
+                        <Button layoutX="40.0" layoutY="192.0" mnemonicParsing="false" onAction="#prestamo" prefHeight="35.0" prefWidth="133.0" text="PRÉSTEC" />
+                        <Button layoutX="227.0" layoutY="192.0" mnemonicParsing="false" onAction="#canviCompte" prefHeight="35.0" prefWidth="139.0" text="CAMBIAR COMPTE" />
+                        <Button layoutX="40.0" layoutY="251.0" mnemonicParsing="false" onAction="#tarjeta" prefHeight="35.0" prefWidth="133.0" text="TARJETA" />
+                        <Button layoutX="227.0" layoutY="251.0" mnemonicParsing="false" onAction="#informacio" prefHeight="35.0" prefWidth="133.0" text="INFORMACIO" />
                      </children>
                   </Pane>
                   <Pane layoutX="14.0" layoutY="379.0" prefHeight="56.0" prefWidth="572.0" style="-fx-background-color: grey;">
@@ -32,8 +42,6 @@
                   </Pane>
                </children>
             </Pane>
-            <Button layoutX="479.0" layoutY="42.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="171.0" text="TANCAR COMPTE" />
-            <Button layoutX="179.0" layoutY="42.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="273.0" text="CANVIAR CLAU D'ACCES" />
             <ImageView fitHeight="88.0" fitWidth="79.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@DALL_E_2023-03-15_09.41.39_-_logo-removebg-preview.png" />
