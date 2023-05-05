@@ -57,7 +57,7 @@ public class Retirar {
 * del resultado.
 */
 @FXML
-void handleRetirar() {
+void Retirar() {
     Comptes cuentaSeleccionada = comboBoxCuentas.getSelectionModel().getSelectedItem();
     if (cuentaSeleccionada != null) {
         double cantidadRetirar = Double.parseDouble(dinerotxt.getText());
